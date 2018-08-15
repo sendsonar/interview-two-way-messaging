@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  post 'conversations/match', to: 'conversations#match'
+  post '/process_message', to: 'conversations#process_message'
+  post 'conversations/send_user_message', to: 'conversations#send_user_message'
 end
